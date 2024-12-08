@@ -33,13 +33,3 @@ for i, process in enumerate(process_sizes):  # Loop through each process
 print("\nRemaining Memory in Partitions:")
 for i, partition in enumerate(remaining_partitions):
     print(f"Partition {i+1}: {partition} KB")
-
-        )
-    else:
-        print(f"P{i+1}\t\t{process} KB\t\tNot Allocated\t-")
-
-# Display unused memory in partitions after allocation
-# Fragmentation
-print("\nRemaining Memory in Partitions:")
-for i, partition in enumerate(memory_partitions):
-    print(f"Partition {i+1}: {partition} KB")
