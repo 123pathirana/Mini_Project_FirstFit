@@ -7,7 +7,6 @@ allocations = [-1] * len(process_sizes)  # Initialize all processes as not alloc
 
 # Create a copy of memory partitions to track remaining sizes
 remaining_partitions = memory_partitions.copy()
-
 # First Fit allocation algorithm
 for i, process in enumerate(process_sizes):  # Iterate through each process
     for j in range(len(remaining_partitions)):  # Check all partitions
@@ -16,7 +15,6 @@ for i, process in enumerate(process_sizes):  # Iterate through each process
             allocations[i] = j  # Assign this partition to the current process
             remaining_partitions[j] -= process  # Reduce the size of the partition
             break  # Exit loop after allocation
-
 # Display results
 print("Process No.\tProcess Size\tPartition No.\tFragmentation")
 for i, process in enumerate(process_sizes):  # Loop through each process
